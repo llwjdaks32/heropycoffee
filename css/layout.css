@@ -155,7 +155,7 @@ main{}
 main>section{
     border-top: 1px solid #333;
 }
-main>section:nth-child(1){height: 640px;}
+
 main>section:nth-child(2){height: 60px;}
 main>section:nth-child(3){height: 660px;}
 main>section:nth-child(4){height: 240px;}

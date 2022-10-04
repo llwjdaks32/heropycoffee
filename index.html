@@ -35,6 +35,11 @@
     <script src="./js/prefixfree.min.js"></script>
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- 부드러운 애니메이션 스크립트 소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    
+    <!-- 메인스크립트 -->
+    <script src="./script/main.js" defer></script>
 
     <title>커피전문점 레이아웃</title>
 </head>
@@ -323,7 +328,31 @@
 
     <!-- 메인영역 -->
     <main>
-        <section><h2>제목1</h2></section>
+        <section class="visual">
+            <h2>메인 비주얼 이미지</h2>
+            <div class="inner">
+                <div class="title fadein">
+                <img src="./images/visual_title.png" alt="">
+                <a href="#" title="자세히보기" class="detail_btn">
+                    자세히보기
+                </a>
+                </div>
+
+                <div class="fadein">
+                    <img src="./images/visual_cup2.png" alt="" class="cup2">
+                    <img src="./images/visual_cup2_text.png" alt="" class="cup2_txt">
+                    </div>
+
+                <div class="fadein">
+                <img src="./images/visual_cup1.png" alt="" class="cup1">
+                <img src="./images/visual_cup1_text.png" alt="" class="cup1_txt">
+                </div>
+                
+                <div class="fadein">
+                <img src="./images/visual_spoon.png" alt="" class="spoon">
+                </div>
+            </div>
+        </section>
         <section><h2>제목2</h2></section>
         <section><h2>제목3</h2></section>
         <section><h2>제목4</h2></section>
@@ -333,6 +362,16 @@
         <section><h2>제목8</h2></section>
         <section><h2>제목9</h2></section>
         <section><h2>제목10</h2></section>
+        <!-- 배너 배지 -->
+        <aside class="badges">
+            <a href="#" title="디저트 50% 할인">
+                <img src="./images/badge1.jpg" alt="">
+            </a>
+            <br>
+            <a href="#" title="골드 회원 가입">
+                <img src="./images/badge2.jpg" alt="">
+            </a>     
+        </aside>
     </main>
 
     <!-- 푸터영역 -->
