@@ -29,3 +29,14 @@ fadeEl.forEach(function(fadeEl,index){
     opacity:1
 });
 });
+
+const promotionEl= document.querySelector("section.promotion");
+const promotionToggleBtn= document.querySelector(".n_inner__right>.material-icons");
+//토글 클릭시
+promotionToggleBtn.addEventListener('click',function(){
+    if(promotionEl.classList.contains('hide')) {
+        promotionEl.classList.remove('hide');
+    }else{
+        promotionEl.classList.add('hide');
+    }
+});

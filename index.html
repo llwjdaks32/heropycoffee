@@ -29,8 +29,15 @@
     <link rel="stylesheet" href="./css/layout.css" type="text/css">
     <!-- 메인콘텐츠 -->
     <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!-- 스와이퍼 슬라이드 서식 -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <!-- 공통서식 -->
     <link rel="stylesheet" href="./css/base.css" type="text/css">
+
+
     <!-- 벤더프리픽스 -->
     <script src="./js/prefixfree.min.js"></script>
     <!-- 제이쿼리 -->
@@ -40,6 +47,8 @@
     
     <!-- 메인스크립트 -->
     <script src="./script/main.js" defer></script>
+
+    
 
     <title>커피전문점 레이아웃</title>
 </head>
@@ -353,8 +362,71 @@
                 </div>
             </div>
         </section>
-        <section><h2>제목2</h2></section>
-        <section><h2>제목3</h2></section>
+
+        <section class="notice">
+            <div class="n_inner">
+                <div class="n_inner__left">
+                    <h2>공지사항</h2>
+                    <!-- Swiper -->
+                    <div class="swiper s_notice">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><a href="javacsript:void(0);" title="">크리스마스 & 연말연시 매장 영업시간 변경 안내</a></div>
+                          <div class="swiper-slide"><a href="javacsript:void(0);" title="">[당첨자 발표] 커피영수증 이벤트</a></div>
+                          <div class="swiper-slide"><a href="javacsript:void(0);" title="">애플리케이션 버전 업데이트 안내</a></div>
+                          <div class="swiper-slide"><a href="javacsript:void(0);" title="">[당첨자 발표] 전자영수증 이벤트</a></div>
+                        </div>
+                    </div>
+                    <i class="material-icons">add_circle</i>
+                </div>
+
+                <div class="n_inner__right">
+                    <h2>커피 프로모션</h2>
+                    <i class="material-icons">upload</i>
+                </div>
+            </div>           
+        </section>
+        <!-- 프로모션 -->
+        <section class="promotion">
+            <!-- Swiper -->
+    <div class="swiper proSlide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/promotion_slide1.jpg" alt="">
+        <a href="javacsript:void(0);" title="프로모션1" class="btn">
+            자세히 보기
+        </a>
+    </div>
+        <div class="swiper-slide"><img src="./images/promotion_slide2.jpg" alt="">
+            <a href="javacsript:void(0);" title="프로모션2" class="btn">
+                자세히 보기
+            </a>
+        </div>
+        <div class="swiper-slide"><img src="./images/promotion_slide3.jpg" alt="">
+            <a href="javacsript:void(0);" title="프로모션3" class="btn">
+                자세히 보기
+            </a>
+        </div>
+        <div class="swiper-slide"><img src="./images/promotion_slide4.jpg" alt="">
+            <a href="javacsript:void(0);" title="프로모션4" class="btn">
+                자세히 보기
+            </a>
+        </div>
+        <div class="swiper-slide"><img src="./images/promotion_slide5.jpg" alt="">
+            <a href="javacsript:void(0);" title="프로모션5" class="btn">
+                자세히 보기
+            </a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev">
+            <span class="material-icons">arrow_back</span>
+      </div>
+      <div class="swiper-button-next">
+            <span class="material-icons">arrow_forward</span>
+      </div>
+    </div>
+        </section>
+
+        
         <section><h2>제목4</h2></section>
         <section><h2>제목5</h2></section>
         <section><h2>제목6</h2></section>
@@ -378,5 +450,36 @@
     <footer>
         
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".s_notice", {
+        direction: "vertical",
+        autoplay: true,
+        loop:true,
+      });
+      var swiper = new Swiper(".proSlide", { //객체 생성
+        slidesPerView: 3, //속성:값
+        spaceBetween: 10,//속성:값
+        loop:true,//반복회전
+        centeredSlides:true,//1번 슬라이드가 중앙에 배치 
+        pagination: {//속성:값
+          el: ".swiper-pagination",//컨트롤버튼 나오게
+          clickable: true,//컨트롤버튼 클릭 할 수 있음
+        },
+        autoplay: {//자동으로 움직임
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {//좌우버튼 만들기
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+      });
+    </script>
 </body>
 </html>
