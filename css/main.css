@@ -37,19 +37,10 @@ main{padding-top: 120px;}
 .cup2_txt{top: 186px; right: 412px;}
 .spoon{bottom: 0px; left: 275px;}
 
-.detail_btn{
-    width: 130px;
-    padding: 10px;
-    border: 4px;
-    border: 2px solid #333;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    display:block;
-    transition: 0.4s;
+.inner .detail_btn{
+    border: 2px solid #592b18;
     color: #592b18;
     transform:translateX(130px);
-    border-radius: 3px;
 }
 .detail_btn:hover{
     color: #fff;
@@ -88,6 +79,7 @@ main{padding-top: 120px;}
 }
 /* +기호 버튼 서식 */
 .n_inner__left i{
+    cursor: pointer;
     font-size: 30px;
     color: #fff;
     padding: 15px 20px 0px 0px;
@@ -130,6 +122,7 @@ main{padding-top: 120px;}
     color: #333;
 }
 .n_inner__right i{
+    cursor: pointer;
     font-size: 30px;
     padding: 15px 20px 0px 0px;
 }
@@ -144,13 +137,14 @@ main{padding-top: 120px;}
     overflow: hidden;
     transition: height .4s;
 }
-.promotion.hide{
+.hide{
     height: 0;
 }
+
 .promotion h2{display: none;}
 .proSlide{
     width: calc(819px * 3 + 10px * 2); /*2477*/
-    height: 553px;
+    height: 653px;
     flex-shrink:0 ;
 }
 .proSlide .swiper-slide{
@@ -163,7 +157,7 @@ main{padding-top: 120px;}
 }
 .proSlide .swiper-slide .btn{
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     left: 0;
     right: 0;
     margin: auto;
@@ -182,8 +176,12 @@ main{padding-top: 120px;}
     display: block;
     transition: .4s;
 }
+.btn:hover{
+    color: #f6f5ef;
+    background-color: #333;
+}
 .promotion .swiper-pagination{
-bottom: 10px !important;
+bottom: 20px !important;
 z-index: 1;
 }
 .promotion .swiper-pagination .swiper-pagination-bullet{
@@ -228,4 +226,259 @@ z-index: 1;
 .proSlide .swiper-button-next::after,
 .proSlide .swiper-button-prev::after{
     display: none;
+}
+
+/* 리워드서식 */
+
+.reward{
+    height: 241px;
+    background: rgb(39,39,39);
+    background: linear-gradient(90deg, rgba(39,39,39,1) 60%, rgba(213,199,152,1) 60%);
+}
+
+.reward_inner{
+    background-image: url(../images/rewards.jpg);
+    margin: 0px auto;
+    width: 1100px;
+    height: 241px;
+    position: relative;
+}
+.btn_group{
+    position: absolute;
+    right: 0px;
+    bottom: 24px;
+    width: 260px;
+}
+.gift{
+    width: 255px;
+    margin-top: 10px;
+}
+.btn_join,.btn_login{
+    display: inline-block;
+}
+.btn_join{
+    margin-right: 10px;
+    color: #fff;
+    background-color: #333;
+}
+.btn_join:hover{
+    color: #333;
+    background-color: rgba(255, 255, 255, 0);
+}
+.btn_login{
+    width: 110px;
+}
+
+/* 영상컨텐츠 */
+.movie{
+    width: 100%;
+    height: 700px;
+    background-color: #222;
+    position: relative;
+}
+.movie .m_inner{
+    width: 1100px;
+    height: 700px;
+    margin: 0px auto;
+    position: relative;
+    z-index: 12;
+}
+.movie .m_inner img{
+    position: absolute;
+}
+.m_img1{
+    left: 0px;
+    top: 50px;
+    animation-name: m_img1;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+.m_img2{
+    left: 150px;
+    top: 350px;
+    animation-name: m_img2;
+    animation-iteration-count: infinite;
+    animation-duration: 3.4s;
+}
+.m_img3{
+    right: 0px;
+    bottom: -200px;
+    animation-name: m_img3;
+    animation-iteration-count: infinite;
+    animation-duration: 3.7s;
+}
+
+@keyframes m_img1{
+    0%{top: 50px;}
+    50%{top: 65px;}
+    100%{top: 50px;}
+}
+@keyframes m_img2{
+    0%{left: 150px; top: 350px;}
+    50%{left: 150px; top: 335px;}
+    100%{left: 150px; top: 350px;}
+}
+@keyframes m_img3{
+    0%{right: 0px; bottom: -200px;}
+    50%{right: 0px; bottom: -185px;}
+    100%{right: 0px; bottom: -200px;}
+}
+
+.youtube{
+    width: 1920px;
+    height: 700px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+.youtube video{
+    width: 100%;
+    height: 100%;
+}
+.cover{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background-image: url(../images/video_cover_pattern.png);
+}
+
+/* 아이스커피 블랜드 */
+
+.season-product h2{display: none;}
+.season-product{
+    height: 400px;
+    background-image: url(../images/season_product_bg.jpg);
+}
+.inner{
+    width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+.season-product .coffee01{
+    position: absolute;
+}
+.season-product .txt_group{
+    position: absolute;
+    top: 110px;
+    right: 100px;
+}
+.season-product .c_title{
+    margin-bottom: 10px;
+}
+.season-product .description{
+    margin-bottom: 15px;
+}
+.season-product img{
+    display: block;
+}
+
+/* 시슨제품 */
+.reserve-coffee{
+background-image: url(../images/reserve_bg.jpg);
+}
+.reserve-coffee .inner{
+    position: relative;
+    width: 1100px;
+    height: 400px;
+}
+.reserve-coffee .reserve-logo{
+    position: absolute;
+    top: 110px;
+    left: 0px;
+}
+.reserve-coffee .txt_group{
+    position: absolute;
+    top: 124px;
+    left: 208px;
+}
+.reserve-coffee .product{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* 메뉴선택 */
+.pick-your-favorite{
+    background-image: url(../images/favorite_bg.jpg);
+}
+.pick-your-favorite .inner{
+    height: 400px;
+    padding: 110px 0;
+}
+.pick-your-favorite .txt_group{
+    width: 362px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.pick-your-favorite .txt_group .c_title{
+    margin-bottom: 40px;
+}
+.pick-your-favorite .txt_group .description{
+    margin-bottom: 40px;
+}
+.pick-your-favorite .btn{
+    border: 2px solid #fff;
+    color: #fff;
+}  
+.pick-your-favorite .btn:hover{
+    background-color: #fff;
+    color: #592b18;
+}
+
+/* 리저브 스토어 */
+.reserve-store{
+    background-image: url(../images/reserve_store_bg.jpg);
+}
+.reserve-store .inner{
+    height: 600px;
+}
+
+/* 매장찾기 */
+.find-store{
+    background-image: url(../images/find_store_bg.jpg);
+}
+.find-store .inner{
+    height: 400px;
+    position: relative;
+}
+.find-store .texture1{
+    position: absolute;
+    top: 0px;
+    left: 400px;
+}
+.find-store .texture2{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.find-store .picture1{
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .5);
+    top: -60px;
+    left: 0px;
+}
+.find-store .picture2{
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .5);
+    top: 150px;
+    left: 250px;
+}
+.find-store .txt_group{
+    position: absolute;
+    top: 120px;
+    left: 550px;
+}
+.find-store .txt_group .c_title{
+    margin-bottom: 20px;
+}
+.find-store .txt_group .description{
+    margin-bottom: 20px;
 }
