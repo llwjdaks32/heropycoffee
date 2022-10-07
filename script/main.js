@@ -1,5 +1,12 @@
 /* 292.p*/
 const badgeEl= document.querySelector('.badges');
+const topBtnEl=document.querySelector('#top_btn');
+
+topBtnEl.addEventListener('click',function(){
+    gsap.to(window, .6,{ //브라우저를 선택하여 0.6초만에
+        scrollTo: 0 //스크롤 꼭대기 0까지 올라간다.
+    });
+}); 
 
 window.addEventListener('scroll', function(){
     console.log(window.scrollY); //스크롤값 확인하기
@@ -8,14 +15,21 @@ window.addEventListener('scroll', function(){
         gsap.to(badgeEl,0.6,{
             opacity:0,
             display:'none'
-        })
-
+        });
+        gsap.to(topBtnEl,0.6,{
+            opacity:1,
+            // x:0
+        });
     }else{
         // badgeEl.style.display='block';
         gsap.to(badgeEl,0.6,{
             opacity:1,
             display:'block'
-        })
+        });
+        gsap.to(topBtnEl,0.6,{
+            opacity:0,
+            // x:0
+        });
     }
 });
 
@@ -55,3 +69,18 @@ toggleBtnEl.addEventListener('click',function(){
         promotionEl.classList.add('hide')//높이가 0원래대로
     }
 });
+
+// 6, 7, 8, 10 컨텐츠가 화면의 80%지점에 보일 때 동작하는 스크립트
+const spyEl = document.querySelectorAll('section.scroll-spy');
+
+spyEl.forEach(function (spyEl) {
+
+    new ScrollMagic
+    .Scene({ //감시할 장면을 추가
+        triggerElement: spyEl,
+        triggerHook: .8 //화면의 80% 지점에서 동작
+    })
+    .setClassToggle(spyEl, 'show') //show클래스를 적용하거나 해제하기
+    .addTo(new ScrollMagic.Controller()); //컨트롤러에 장면을 할당한다
+});
+
